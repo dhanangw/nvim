@@ -5,6 +5,14 @@ lsp.preset("recommended")
 lsp.nvim_workspace()
 
 
+lsp.configure('metals', {
+  force_setup = true,
+  on_attach = function()
+    print('hello metals')
+  end,
+})
+
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
