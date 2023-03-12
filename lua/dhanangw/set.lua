@@ -36,3 +36,9 @@ vim.g.mapleader = " "
 vim.g.netrw_liststyle = 3 -- tree style
 vim.g.netrw_banner = 0 -- hide banner
 
+-- undo configurations
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
